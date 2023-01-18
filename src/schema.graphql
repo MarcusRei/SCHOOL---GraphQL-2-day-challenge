@@ -1,0 +1,22 @@
+type Movie {
+  id: ID
+  title: String
+  description: String
+  genre: MovieGenre
+  image: String
+}
+
+enum MovieGenre {
+  COMEDY
+  ACTION
+  DRAMA
+  HORROR
+}
+
+type Query {
+  getAllMovies: [Movie]
+}
+
+type Mutation {
+  createMovie(title: String!, description: String!, image: String!): Movie
+}

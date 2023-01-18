@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.btn {
+  background-color: gray;
+  border: none;
+  padding: 2em;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  background-color: rgb(66, 66, 66);
+}
