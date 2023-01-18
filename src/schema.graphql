@@ -18,5 +18,12 @@ type Query {
 }
 
 type Mutation {
-  createMovie(title: String!, description: String!, image: String!): Movie
+  createMovie(input: CreateMovieInput!): Movie
+}
+
+input CreateMovieInput {
+  title: String!
+  description: String
+  genre: MovieGenre!
+  image: String
 }
