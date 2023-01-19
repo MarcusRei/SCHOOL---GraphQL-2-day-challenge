@@ -13,7 +13,7 @@ const app = express();
 //Will parse the requests
 app.use(express.json());
 
-//MAke static files available
+//Make static files available
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "views")));
 

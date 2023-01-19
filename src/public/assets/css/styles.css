@@ -16,3 +16,23 @@ body {
 .btn:hover {
   background-color: rgb(66, 66, 66);
 }
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+}
+
+#inputForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-direction: column;
+}
