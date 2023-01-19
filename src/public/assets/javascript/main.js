@@ -37,6 +37,7 @@ function renderHTML(movies) {
     title.innerHTML = movies[i].title;
     img.src = movies[i].image;
     img.alt = movies[i].title;
+    description.innerHTML = movies[i].description;
 
     container.classList.add("movie");
 
@@ -62,6 +63,7 @@ function toggleInputForm() {
 
   //Skapar titel
   let titleContainer = document.createElement("div");
+  titleContainer.setAttribute("class", "title");
 
   let titleLabel = document.createElement("label");
   titleLabel.innerText = "Titel:";
@@ -76,6 +78,7 @@ function toggleInputForm() {
 
   //Skapar Genre
   let genreContainer = document.createElement("div");
+  genreContainer.setAttribute("class", "genre");
 
   let genreLabel = document.createElement("label");
   genreLabel.innerText = "Genre:";
@@ -94,22 +97,40 @@ function toggleInputForm() {
 
   //Skapar Description
   let descriptionContainer = document.createElement("div");
+  descriptionContainer.setAttribute("class", "description");
 
   let descriptionLabel = document.createElement("label");
   descriptionLabel.innerText = "Beskrivning:";
   descriptionContainer.appendChild(descriptionLabel);
 
   let descriptionInput = document.createElement("input");
+  descriptionInput.setAttribute("class", "desc-input");
   descriptionContainer.appendChild(descriptionInput);
 
   //Appendar alla description-element
   inputForm.appendChild(descriptionContainer);
 
+  //Skapar image
+  let imageContainer = document.createElement("div");
+  imageContainer.setAttribute("class", "image");
+
+  let imageLabel = document.createElement("label");
+  imageLabel.innerText = "Bild-URL (valfritt):";
+  imageContainer.appendChild(imageLabel);
+
+  let imageInput = document.createElement("input");
+  imageContainer.appendChild(imageInput);
+
+  //Appendar alla image-element
+  inputForm.appendChild(imageContainer);
+
+  //Appendar hela inputen
+  mainContainer.appendChild(inputForm);
+
   submitButton = document.createElement("button");
+  submitButton.setAttribute("class", "btn");
   submitButton.innerText = "Skapa film";
   mainContainer.appendChild(submitButton);
-
-  mainContainer.appendChild(inputForm);
 
   /* const createMovieQuery = `mutation CreateMovie($input: CreateMovieInput!) {
 
@@ -169,6 +190,7 @@ function toggleInputForm() {
             id: crypto.randomUUID(),
             title: titleInput.value,
             genre: genreSelect.value,
+            image: imageInput.value,
             description: descriptionInput.value,
           },
         ],

@@ -3,18 +3,55 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   gap: 1em;
+  font-family: "Mulish", sans-serif;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 130, 72, 1) 0%,
+    rgba(248, 128, 73, 1) 46%,
+    rgba(249, 244, 81, 1) 100%
+  );
+  background-size: 800%;
+  color: white;
+
+  animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+#main-title {
+  font-family: "Chela One", cursive;
+  font-size: 5em;
+  text-shadow: 1px 4px 7px rgba(0, 0, 0, 0.5);
+}
+
+#secondary-title {
+  font-size: 1em;
+  text-shadow: 1px 4px 7px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
-  background-color: gray;
+  background: rgb(248, 83, 83);
   border: none;
   padding: 2em;
   border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .btn:hover {
-  background-color: rgb(66, 66, 66);
+  background: rgb(247, 110, 110);
+  background-position: right;
+  cursor: pointer;
 }
 
 #main-content {
@@ -22,17 +59,52 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1em;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  width: 22%;
+  height: 30%;
 }
 
 img {
-  height: 50%;
-  width: 50%;
+  width: 100px;
 }
 
 #inputForm {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1em;
   flex-direction: column;
+}
+
+.title {
+  display: flex;
+  gap: 1em;
+}
+
+.genre {
+  display: flex;
+  gap: 1em;
+}
+
+.description {
+  display: flex;
+  gap: 1em;
+}
+
+.image {
+  display: flex;
+  gap: 1em;
+}
+
+.desc-input {
 }
