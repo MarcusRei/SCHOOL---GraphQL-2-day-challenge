@@ -1,4 +1,4 @@
-# two-day-challenge
+# Mackes Movies
 
 ## 📜 Description 
 This was a challenge to create a very simple API using GraphQL and a database using SheetDb in only two days.
